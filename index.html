@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment Form</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- End Font -->
+
+    <link
+      name="font-awesome"
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/assets/css/custom.css"
+    /> 
+  </head>
+  <body>
+    <nav id="nav-bar" class="nav-bar">
+      <ul>
+        <img
+          style="margin: 15px 0 14px 30px"
+          class="nav-logo"
+          id="nav-logo"
+          src="public/assets/img/nw-horizontal.png"
+          alt=""
+        />
+      </ul>
+    </nav>
+
+    <div class="recruitment">
+      <div class="container-vectorize">
+        <div class="wrapper-image">
+          <img
+            class="starlid"
+            src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/other/Starlid-illustration.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="container-form">
+        <div class="card">
+          <div class="container">
+            <form action="#">
+              <img
+                src="public/assets/img/logomark-sign.png"
+                alt=""
+                style="width: 7rem; margin-bottom: 16px"
+              />
+              <div class="form-description">
+                <h3 style="font-size: 28px">Form Rekrutasi</h3>
+                <p style="font-size: small">
+                  Isi data di bawah sesuai dengan identitas diri anda dan
+                  lowongan yang akan anda pilih
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label style="margin-bottom: 10px" for="Fullname"
+                  >Fullname <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="Fullname"
+                  class="form-control"
+                  id="Fullname"
+                  placeholder="Masukan nama"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Email"
+                  >Email <span class="text-danger">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="Email"
+                  id="Email"
+                  placeholder="Masukan email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Phone Number"
+                  >Phone Number <span class="text-danger">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="Phone Number"
+                  id="Phone Number"
+                  placeholder="Masukan Phone Number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Vacancy"
+                  >Vacancy <span class="text-danger">*</span>
+                </label>
+                <select class="form-control" name="Vacancy" id="Vacancy">
+                  <option value="">- Pilih Lowongan -</option>
+                  <option value="DATABASE DEVELOPER">DATABASE DEVELOPER</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="Position"
+                  >Position <span class="text-danger">*</span>
+                </label>
+                <select class="form-control" name="position" id="position">
+                  <option value="">- Pilih Posisi -</option>
+                  <option value="Contoh Posisi #1">Contoh Posisi #1</option>
+                  <option value="Contoh Posisi #2">Contoh Posisi #2</option>
+                  <option value="Contoh Posisi #3">Contoh Posisi #3</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+          <div class="footer">
+            <ul>
+              <li>
+                <a href="https://instagram.com/neuronworks">
+                  <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@NeuronworksIndonesia">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/neuronworks">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/neuronworks/">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+
+            <a style="font-size: small" href="https://www.neuronworks.co.id">
+              www.neuronworks.co.id
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
