@@ -34,7 +34,8 @@
       rel="stylesheet"
       type="text/css"
       href="public/assets/css/custom.css"
-    /> 
+    />
+    <link rel="stylesheet" type="text/css" href="public/assets/css/modal.css" />
   </head>
   <body>
     <nav id="nav-bar" class="nav-bar">
@@ -110,8 +111,8 @@
                 <input
                   class="form-control"
                   type="text"
-                  name="Phone Number"
-                  id="Phone Number"
+                  name="PhoneNumber"
+                  id="PhoneNumber"
                   placeholder="Masukan Phone Number"
                 />
               </div>
@@ -130,15 +131,15 @@
                 <label for="Position"
                   >Position <span class="text-danger">*</span>
                 </label>
-                <select class="form-control" name="position" id="position">
-                  <option value="">- Pilih Posisi -</option>
+                <select class="form-control" name="Position" id="Position">
+                  <option value="-">- Pilih Posisi -</option>
                   <option value="Contoh Posisi #1">Contoh Posisi #1</option>
                   <option value="Contoh Posisi #2">Contoh Posisi #2</option>
                   <option value="Contoh Posisi #3">Contoh Posisi #3</option>
                 </select>
               </div>
 
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button class="btn btn-primary" id="btnSubmit">Kirim</button>
             </form>
           </div>
           <div class="footer">
@@ -172,5 +173,105 @@
         </div>
       </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Data Form Rekrutasi</h2>
+        </div>
+        <div class="modal-body">
+          <table>
+            <tr>
+              <td>
+                <p>Fullname</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalFullname"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Email</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalEmail"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>PhoneNumber</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalPhoneNumber"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Vacancy</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalVacancy"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Position</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalPosition"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("btnSubmit");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function () {
+    modal.style.display = "block";
+
+    // Get data from form
+    let data = [];
+    data["Fullname"] = document.getElementById("Fullname").value;
+    data["Email"] = document.getElementById("Email").value;
+    data["PhoneNumber"] = document.getElementById("PhoneNumber").value;
+    data["Vacancy"] = document.getElementById("Vacancy").value;
+    data["Position"] = document.getElementById("Position").value;
+
+    for (const key in data) {
+      document.getElementById("modal" + key).innerHTML = data[key];
+    }
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
